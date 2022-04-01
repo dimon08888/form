@@ -3,10 +3,10 @@ export function validateLogin(login: string): string {
   const maxLength = 32;
 
   if (login.length < minLength) {
-    return 'Login mast be more 3 symbols';
+    return 'Login must be more than 3 characters.';
   }
   if (login.length > maxLength) {
-    return 'Login mast be less 32 symbols';
+    return 'Login must be less than 32 characters.';
   }
 
   return '';
@@ -14,7 +14,7 @@ export function validateLogin(login: string): string {
 
 export function validateEmail(email: string): string {
   if (!email.includes('@')) {
-    return 'Please correct E-mail';
+    return 'Please enter correct email address.';
   }
   return '';
 }
